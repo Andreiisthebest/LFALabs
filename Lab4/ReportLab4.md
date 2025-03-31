@@ -247,15 +247,15 @@ Besides that, it has step logging and provides step by step display of every dec
 
 ```
 def main():
-    generator = RegexCombinationGenerator(max_repetitions=5)
+    generator = RegexGenerator(max_repetitions=5)
 
-    example_regexes = [
-        "O(P|Q|R)+ 2(3|4)",
-        "A*B(C|D|E)F(G|H|I)²",
-        "J+K(L|M|N)*O?(P|Q)³"
+    regexes = [
+        "M?N^2(O|P)^3Q*R^+",
+        "(X|Y|Z)^38^+(9|o)^2",
+        "(H|i)(J|K)L*N?"
     ]
 
-    for regex in example_regexes:
+    for regex in regexes:
         print(f"\nGenerating combinations for: {regex}")
         combinations = generator.generate_combinations(regex, count=5)
         print("Sample combinations:")
