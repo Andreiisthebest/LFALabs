@@ -216,20 +216,21 @@ q4 → ε
 Is Deterministic? False
 
 DFA:
-States: ['qq1', 'qq2q3', 'qq0', 'qq3', 'qq4']
-Alphabet: ['b', 'a', 'c']
+States: ['qq3', 'qq4', 'qq0', 'qq2q3', 'qq1']
+Alphabet: ['c', 'a', 'b']
 Initial State: qq0
 Final States: ['qq4']
 Transitions:
 qq0 --a--> qq1
 qq1 --b--> qq2q3
-qq2q3 --b--> qq4
-qq2q3 --a--> qq3
 qq2q3 --c--> qq3
-qq3 --b--> qq4
+qq2q3 --a--> qq3
+qq2q3 --b--> qq4
 qq3 --a--> qq3
+qq3 --b--> qq4
 NDFA graph saved as 'ndfa_graph.png'
 DFA graph saved as 'dfa_graph.png'
+
 ```
 ![ndfa_graph.png](ndfa_graph.png)
 ![dfa_graph.png](dfa_graph.png)
